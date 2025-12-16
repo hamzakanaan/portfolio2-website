@@ -184,15 +184,15 @@ const Institution = styled.div`
 `;
 
 const Resume = () => {
-  const [activeCompany, setActiveCompany] = useState('Selfbook');
+  const [activeCompany, setActiveCompany] = useState('cregen');
   
   const experiences = [
     {
       id: 1,
-      title: "Software Developer (Remote)",
-      company: "Selfbook",
-      location: "US • New York",
-      date: "Jun 2021 - Present",
+      title: "Frontend Developer (Remote)",
+      company: "cregen",
+      location: "UAE• Dubai",
+      date: "Jun 2023 - Present",
       points: [
         "Developing screens and UI components for the web application using React and Tailwind",
         "Fixing UI issues and integrating backend APIs with Redux Saga"
@@ -258,12 +258,12 @@ const Resume = () => {
 
   const education = [
     {
-      degree: "Bachelor's degree in communication",
-      institution: "University of Toronto • Canada",
-      date: "2019 - 2021",
+      degree: "bachelor’s Degree in Information Technology Engineering | 2019-2025 ",
+      institution: "International University for Science and Technology (IUST)",
+      date: "2019 - 2025",
       description: [
-        "Studied various aspects of communication theory, digital media, and journalism",
-        "Participated in multiple research projects focused on digital communication"
+        "Studied various aspects of Information Technology Engineering",
+        "Participated in multiple research projects focused on Information Technology Engineering"
       ]
     },
     {
@@ -277,7 +277,7 @@ const Resume = () => {
     }
   ];
 
-  const companies = ["Selfbook", "Wevoz", "FreeBeings", "TDF", "Upwork", "Shopify"];
+  const companies = ["cregen", "Wevoz", "FreeBeings", "TDF", "Upwork", "Shopify"];
   const currentExperience = experiences.find(exp => exp.company === activeCompany);
 
   return (
@@ -296,21 +296,23 @@ const Resume = () => {
           ))}
         </CompanyList>
         <ExperienceDetails>
-          <ExperienceEntry
-            key={currentExperience.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <JobTitle>{currentExperience.title}</JobTitle>
-            <CompanyInfo>{currentExperience.company} • {currentExperience.location}</CompanyInfo>
-            <DateRange>{currentExperience.date}</DateRange>
-            <BulletPoints>
-              {currentExperience.points.map((point, index) => (
-                <li key={index}>{point}</li>
-              ))}
-            </BulletPoints>
-          </ExperienceEntry>
+          {currentExperience && (
+            <ExperienceEntry
+              key={currentExperience.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <JobTitle>{currentExperience.title}</JobTitle>
+              <CompanyInfo>{currentExperience.company} • {currentExperience.location}</CompanyInfo>
+              <DateRange>{currentExperience.date}</DateRange>
+              <BulletPoints>
+                {currentExperience.points.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </BulletPoints>
+            </ExperienceEntry>
+          )}
         </ExperienceDetails>
       </ExperienceContainer>
 

@@ -159,7 +159,7 @@ const Hero = () => {
     '#BC4BB6', // n (vibrant rose-purple)
   ];
 
-  const name = "Darlene Robertson";
+  const name = "Hamza Kanaan";
   const letters = name.split('').map((letter, index) => {
     if (index < 7) { // Darlene
       return {
@@ -211,16 +211,11 @@ const Hero = () => {
         animate="visible"
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        I'm a software engineer based in Toronto, Canada and also a communication
-        and journalism student. I enjoy creating things that live on the internet,
-        whether that be websites, applications, or anything in between. I have been
-        freelancing for a year now while studying at the university and I've manage
-        to gain a decent amount of experience and valuable knowledge from all
-        different kinds of fields throughout my projects/work.
+        Motivated and detail-oriented IT Engineer specialized in front-end web development. Skilled in designing and building responsive, user-friendly websites and web applications. Experienced in both hardware–software integration and AI-driven systems, with a strong passion for innovation and technology.  projects/work.
       </Description>
       <SocialLinks>
         <SocialButton 
-          href="mailto:contact@example.com"
+          href="mailto:hamzakanaan719@gmail.com"
           gradient="linear-gradient(135deg, #6830E8 0%, #B88AF2 100%)"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -229,7 +224,7 @@ const Hero = () => {
           Send an email
         </SocialButton>
         <SocialButton 
-          href="https://linkedin.com" 
+          href="www.linkedin.com/in/hamza-kanaan-350153271" 
           target="_blank" 
           rel="noopener noreferrer"
           gradient="linear-gradient(135deg, #4B6CB7 0%, #6B8DD6 100%)"
@@ -251,7 +246,7 @@ const Hero = () => {
           Upwork
         </SocialButton>
         <SocialButton 
-          href="https://github.com" 
+          href="https://github.com/hamzakanaan" 
           target="_blank" 
           rel="noopener noreferrer"
           gradient="linear-gradient(135deg, #DD5789 0%, #E97EAD 100%)"
